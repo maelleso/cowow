@@ -1,0 +1,17 @@
+{% extends 'cowapp/base.html' %}
+{% block content %}
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Nouveau Annonce</h3>
+            <form method="POST" class="post-form">
+                {% csrf_token %}
+                <div>
+                    {{ form.as_p }}
+                </div>
+                <button type="submit" class="save btn btn-default">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

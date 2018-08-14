@@ -1,0 +1,36 @@
+{% extends 'cowapp/base.html' %}
+{% block content %}
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="post">
+                <br/>
+                <br/> {% if post.date_publication %}
+                <div class="date">
+                    {{ post.date_publication }}
+                </div>
+                {% endif %}
+                <div style="text-align: right">
+                    <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </a>
+                </div>
+                <span class="image main">
+                    <img src="" alt="" />
+                </span>
+                <div id="posting">
+                    <div class="inner">
+                        <div style="padding:1%; border:1px solid rgb(134, 228, 192);">
+                            <h3> Titre : {{ post.titre }}</h3>
+                            <div style="padding:4%; border:1px solid rgb(134, 228, 192);">{{ post.texte|linebreaksbr }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

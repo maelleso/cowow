@@ -1,0 +1,78 @@
+{% extends 'cowapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="section-container no-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <img src="{% static 'css/images/img.jpg' %}" style="width:100%">
+            </div>
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form action="" class="reveal-content contact-form">
+                            <div class="form-group">
+                                <input type="name" class="form-control" id="name" placeholder="Nom Prénom">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="subject" placeholder="Sujet">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg">Envoyer</button>
+                        </form>
+                    </div>
+
+                    <div class="col-md-5 col-md-offset-1">
+                        <h3>Acces Cow Wow</h3>
+                        <div>
+                            <p>42 rue Rouelle <br/>75015 Paris FRANCE</p>
+                        </div>
+                        <div>
+                            <p>contact@mycowbusiness.com<br>+331 45 31 64 32</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="section-container footer-container">
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-4">
+                        <h4>Nous Sommes</h4>
+                        <p>Cow Wow, la société de téchnologie rénovante du monde</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h4>Suivez-nous sur nos Reseaux Sociaux</h4>
+                        <p>
+                            <a href="https://facebook.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                          </a>
+                          <a href="https://twitter.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                          </a>
+                          <a href="https://www.linkedin.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                          </a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <img src="{% static 'css/images/cowhome01.png' %}" style="width: 120px; float: right;"/>
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'cowapp/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="">
+        <div class="container">
+            <div class="row">
+            <div class="col-xs-12">
+                <!-- <img class="img-responsive" src="{% static 'css/images/terre.jpg' %}"> -->
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <div class="text-center">
+                        <h1>Mes Vaches</h1>
+                    </div>
+                    <p class="section-container-spacer">
+                    </p>
+                    <div class="table-reponsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Numéro Tag</th>
+                                <th>Date </th>
+                            </tr>
+                        </thead>    
+                        <tbody>
+                            {% for va in vache %}
+                            <tr>
+                                <td>
+                                    <a href="{% url 'info_vache' pk=va.pk %}">{{ va.numero_tag }}</a>
+                                </td>
+                                <td>{{ va.date_stocker }}</td>
+                            </tr>                    
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    </div>
+                    <br/>
+                    <br/>
+                    <div class="row section-container-spacer">
+                    <div class="col-md-6">
+                        <!-- <img class="img-responsive" src="{% static 'css/images/cow.svg' %}" style="max-width:50%;"> -->
+                    </div>
+                    <div class="col-md-6">
+                        <img class="img-responsive" src="{% static 'css/images/cow.svg' %}" style="max-width:60%">
+                    </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <p>Solution de Surveillance Automatique pour le Bétail</p>
+                    <small class="signature pull-right">Cow Wow</small>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        navActivePage();
+    });
+    </script>
+    <script src="static/js/main.41beeca9.js"></script>
+    </body>
+</html>

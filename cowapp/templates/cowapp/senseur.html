@@ -1,0 +1,23 @@
+{% extends 'cowapp/base.html' %} 
+{% block content %}
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script> 
+{% load chartit %} 
+{{ senseurchart|load_charts:"charttm" }}
+<div class="section-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                <div class="text-center">
+                    <h1>{{ info_senseur.vache }} </h1>
+                    <div id="charttm">here</div>
+                </div>
+                <p class="section-container-spacer">
+                </p>
+                <br/>
+                <br/>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

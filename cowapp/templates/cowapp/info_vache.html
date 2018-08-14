@@ -1,0 +1,46 @@
+{% extends 'cowapp/base.html' %}
+{% load static %}   
+{% block content %}
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    {% load chartit %}
+    {{ senseurchart|load_charts:"charttm" }}
+<div class="section-container">
+    <div class="container">
+        <div class="row">
+               <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <div class="text-center">
+                    <h1>Vache {{ vache.numero_tag }}</h1>
+                    </div>   
+                    <p class="section-container-spacer">
+                    </p>
+                    <div class="table-reponsive">
+						<table class="table" id="datatable">
+							<tbody>
+                                <tr>
+                                    <th>Date Enregistrée</th>
+                                    <td>{{ vache.date_stocker }}</td>
+                                </tr>
+                                        <tr>
+                                            <th>Sexe de vache</th>
+                                            <td>{{ vache.sexe }}</td>
+											
+                                        </tr>
+                                        <tr>
+                                            <th>Gestation</th>
+                                            <td>{{ vache.gestation|yesno:"Oui,Non" }}</td>
+                                        </tr>
+								</tbody>
+                            </table>
+                        </div>
+                        <br/>
+                        <br/><br/><br/>                  
+               </div>
+               <div class="col-xs-12 col-md-8 col-md-offset-2">
+               <div id="charttm">here</div> 
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
