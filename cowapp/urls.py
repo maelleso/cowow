@@ -9,7 +9,6 @@ urlpatterns = [
     url(r'^vaches/(?P<pk>[0-9a-zA-Z]+)/vache_senseur/$', views.vache_senseur, name='vache_senseur'),
 
     url(r'^alarmes$',views.alarmes, name='alarmes'),
-    url(r'^gestation$',views.gestation, name='gestation'),
 
     # Post urls
    url(r'^post_list/$', views.post_list, name='post_list'),

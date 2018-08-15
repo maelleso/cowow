@@ -13,8 +13,8 @@
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
 
-  <link href="./assets/apple-touch-icon.png" rel="apple-touch-icon">
-  <link href="./assets/favicon.ico" rel="icon">
+  <link href="{% static 'assets/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="{% static 'assets/favicon.ico' %}" rel='icon' >
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
@@ -102,13 +102,12 @@
       });
     </script>
 
-    <script src="static/js/main.41beeca9.js"></script>
+    <script src="{% static 'js/main.41beeca9.js' %}"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
     <script src="/static/js/info_jour.js"></script>
     <script src="/static/js/info_vache.js"></script>
-    <script src="/static/js/alarme-test.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
